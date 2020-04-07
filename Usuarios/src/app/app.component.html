@@ -1,0 +1,24 @@
+<table border="2px">
+
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+    </tr>
+    <tr *ngFor="let u of listUsers">
+
+        <td>{{u.id}}</td>
+
+        <td>{{u.username}}</td>
+
+        <td>{{u.password}}</td>
+
+        <td>{{u.name}}</td>
+
+        <td>{{u.email}}</td>
+    </tr>
+
+</table>
+<router-outlet></router-outlet>
