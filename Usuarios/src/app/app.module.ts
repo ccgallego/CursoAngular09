@@ -5,16 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { TablaComponent } from './tabla/tabla.component';
+import { FormsModule } from '@angular/forms';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
+import {TableModule} from 'primeng/table';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    TablaComponent
+    TablaComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ButtonModule,
+    InputTextModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

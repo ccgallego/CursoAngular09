@@ -1,1 +1,31 @@
+<div *ngIf="mostrarTabla">
+    <p-table [value]="listUser">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Acciones</th>
 
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-u>
+            <tr>
+                <td>{{u.id}}</td>
+                <td>{{u.username}}</td>
+                <td [class]="typePassword">
+                    {{u.password}}
+                </td>
+                <td>{{u.name}}</td>
+                <td>{{u.email}}</td>
+                <td>
+                    <button pButton title="Eliminar" type="button" icon="pi pi-trash" class="ui-button-danger" (click)="eliminar(u)"></button>
+                    <button pButton title="Actualizar" type="button" icon="pi pi-upload" class="ui-button-text-icon-primary" (click)="actualizar(u)"></button>
+                    <button pButton title="Ver password" type="button" icon="pi pi-eye" class="ui-button-secondary" (click)="mostrarClave(u)"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

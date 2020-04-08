@@ -17,6 +17,7 @@ export class FormularioComponent implements OnInit {
   ngOnInit() {
   }
 
+
   enviarDatos(){
     this.datos = this.user;
     delete this.user;
